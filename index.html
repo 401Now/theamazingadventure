@@ -94,7 +94,7 @@ import { STORY, SETTINGS } from "./story.js";
 const $ = (id) => document.getElementById(id);
 const SAVE_KEY = "pig_farmer_with_venmo_v1";
 
-const penalties = [25, 50, 75, 100, 125, 150];
+const penalties = [25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100];
 const randPenalty = () => penalties[Math.floor(Math.random() * penalties.length)];
 const money = (n) => "$" + Number(n || 0).toFixed(0);
 
