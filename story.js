@@ -1,9 +1,14 @@
 export const SETTINGS = {
   third_penalty_chance: 0.65,
+
+  // Venmo settings (used by index.html to build the link)
+  venmo_username: "@outcastjaxton",
+  venmo_note: "Small business support",
+
   messages: {
     correct: "that’ll do pig",
     penalty: "haha what a dumb pig",
-    bottle: "oink oink piggy"
+    bottle: "sniff those fucking poppers cash pig"
   }
 };
 
@@ -111,7 +116,7 @@ The Pig feels heat in his cheeks (which is impressive, for a pig).`,
       text:
 `Day turns into pattern.
 Pattern turns into routine.
-Routine turns into something the Pig defends as “normal.”
+Routine turns into something the Pig calls “normal.”
 
 The Farmer doesn’t change.
 That’s what makes it dangerous.`,
@@ -150,7 +155,7 @@ The Farmer stays still, like a statue that can blink.`,
       choices: [
         "Act like you meant to do that",
         "Pretend it was an accident",
-        "Bow dramatically to the imaginary applause"
+        "Bow dramatically to imaginary applause"
       ],
       next: "c10"
     },
@@ -211,7 +216,7 @@ The Pig understands: this is the part where choices feel “voluntary.”`,
       choices: [
         "Refuse politely and step back",
         "Accept the ladle and hold it proudly",
-        "Take the ladle and immediately do something dramatic"
+        "Take the ladle and do something dramatic"
       ],
       next: "c14"
     },
@@ -221,7 +226,7 @@ The Pig understands: this is the part where choices feel “voluntary.”`,
       text:
 `It isn’t a leash you can see.
 It’s a leash made of habit.
-The Pig realizes the Farmer doesn’t pull it.
+The Farmer doesn’t pull it.
 The Pig does.
 
 And somehow that’s worse.`,
@@ -238,7 +243,9 @@ And somehow that’s worse.`,
       text:
 `The same yard looks smaller today.
 Not because it shrank—
-because the Pig’s world has been orbiting the Farmer for a while now.`,
+because the Pig’s world has been orbiting the Farmer for a while now.
+
+The Farmer scratches the fence rail, patient as ever.`,
       choices: [
         "Explore the far corner of the yard",
         "Stay near the Farmer because it’s familiar",
@@ -270,7 +277,9 @@ Just two words that make the Pig’s heart thump.`,
 So are the goats.
 Even the cat appears, bored and judgmental.
 
-The Pig senses it: a moment. A stage.`,
+The Pig senses it: a moment.
+A stage.
+A choice that will be remembered.`,
       choices: [
         "Do something small and controlled",
         "Do something big and showy",
@@ -325,23 +334,6 @@ And the story continues… because it’s a story about choosing.`,
         "Walk away and end the loop",
         "Step closer and accept the routine",
         "Look the Farmer in the eye and choose anyway"
-      ],
-      next: "end"
-    },
-
-    end: {
-      title: "The End — For Now",
-      text:
-`The yard goes quiet.
-
-Whatever happened, you chose it.
-Whatever it cost, it counted.
-
-Run it back?`,
-      choices: [
-        "Start over from Chapter 1",
-        "Start over from Chapter 1",
-        "Start over from Chapter 1"
       ],
       next: "c1"
     }
