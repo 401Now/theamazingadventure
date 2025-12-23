@@ -7,111 +7,43 @@
 
 <style>
 :root { color-scheme: dark; }
-body {
-  margin:0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background:#0b0f14;
-  color:#e6edf3;
-}
+body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:#0b0f14; color:#e6edf3; }
 .wrap { max-width: 900px; margin: 0 auto; padding: 24px; }
 header { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:center; }
 h1 { margin:0; font-size:20px; letter-spacing:.2px; }
 
 .hud { display:flex; gap:10px; flex-wrap:wrap; }
-.pill {
-  background:#111826;
-  border:1px solid #263146;
-  padding:8px 10px;
-  border-radius:999px;
-  font-size:13px;
-}
+.pill { background:#111826; border:1px solid #263146; padding:8px 10px; border-radius:999px; font-size:13px; }
 .pill strong { font-variant-numeric: tabular-nums; }
 
-.card {
-  margin-top:16px;
-  background:#0f1622;
-  border:1px solid #263146;
-  border-radius:14px;
-  overflow:hidden;
-}
+.card { margin-top:16px; background:#0f1622; border:1px solid #263146; border-radius:14px; overflow:hidden; }
 .content { padding:18px; }
 .scene-title { font-size:16px; margin:0 0 8px 0; color:#c9d1d9; }
 .story { white-space:pre-wrap; line-height:1.55; font-size:15px; }
 
 .choices { display:grid; gap:10px; padding:0 18px 18px; }
-.choice {
-  padding:12px;
-  border-radius:12px;
-  border:1px solid #2b3a55;
-  background:#111a2a;
-  color:#fff;
-  cursor:pointer;
-  text-align:left;
-}
+.choice { padding:12px; border-radius:12px; border:1px solid #2b3a55; background:#111a2a; color:#fff; cursor:pointer; text-align:left; }
 .choice:hover { background:#13203a; border-color:#3b4f73; }
 
-.footerbar {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px;
-  flex-wrap:wrap;
-  padding:12px 18px;
-  border-top:1px solid #263146;
-  background:#0d1420;
-}
-.linkbtn {
-  background:#111a2a;
-  border:1px solid #2b3a55;
-  padding:10px 12px;
-  border-radius:12px;
-  color:#fff;
-  text-decoration:none;
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  font-size:13px;
-}
+.footerbar { display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; padding:12px 18px; border-top:1px solid #263146; background:#0d1420; }
+.linkbtn { background:#111a2a; border:1px solid #2b3a55; padding:10px 12px; border-radius:12px; color:#fff; text-decoration:none; display:inline-flex; align-items:center; gap:8px; font-size:13px; }
 .linkbtn:hover { background:#13203a; border-color:#3b4f73; }
 .danger { background:#1a0f12; border-color:#6b2a2a; }
 .muted { color:#9fb0c4; font-size:12px; }
 
-.backdrop {
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.6);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:16px;
-}
-.modal {
-  background:#0f1622;
-  border:1px solid #2b3a55;
-  border-radius:16px;
-  width:min(520px,100%);
-  overflow:hidden;
-}
+.backdrop { position:fixed; inset:0; background:rgba(0,0,0,.6); display:none; align-items:center; justify-content:center; padding:16px; }
+.modal { background:#0f1622; border:1px solid #2b3a55; border-radius:16px; width:min(560px,100%); overflow:hidden; }
 .modal-h { padding:16px 16px 0 16px; }
 .modal-h h2 { margin:0; font-size:16px; }
 .modal-b { padding:10px 16px 16px; white-space:pre-wrap; line-height:1.5; color:#c9d1d9; }
-.modal-actions {
-  display:flex;
-  justify-content:flex-end;
-  gap:10px;
-  padding:12px 16px 16px;
-  border-top:1px solid #263146;
-  background:#0d1420;
-}
-.secondary {
-  background:#111a2a;
-  border:1px solid #2b3a55;
-  padding:10px 12px;
-  border-radius:12px;
-  color:#fff;
-  text-decoration:none;
+.modal-actions { display:flex; justify-content:flex-end; gap:10px; padding:12px 16px 16px; border-top:1px solid #263146; background:#0d1420; flex-wrap:wrap; }
+.secondary, .primary {
+  padding:10px 12px; border-radius:12px; text-decoration:none; display:inline-flex; align-items:center;
+  border:1px solid #2b3a55; background:#111a2a; color:#fff; font-size:13px;
 }
 .secondary:hover { background:#13203a; border-color:#3b4f73; }
+.primary { border-color:#2f81f7; background:#1f6feb; }
+.primary:hover { filter: brightness(1.05); }
 </style>
 </head>
 
@@ -122,6 +54,7 @@ h1 { margin:0; font-size:20px; letter-spacing:.2px; }
     <div class="hud">
       <div class="pill">Path: <strong id="path">$0</strong></div>
       <div class="pill">Session: <strong id="session">$0</strong></div>
+      <div class="pill">Paid: <strong id="paid">$0</strong></div>
       <div class="pill">Last: <strong id="last">$0</strong></div>
     </div>
   </header>
@@ -150,6 +83,7 @@ h1 { margin:0; font-size:20px; letter-spacing:.2px; }
     <div class="modal-b" id="modalText"></div>
     <div class="modal-actions">
       <a href="#" class="secondary" id="close">Continue</a>
+      <a href="#" class="primary" id="payBtn" target="_blank" rel="noopener noreferrer" style="display:none;">Pay via Venmo</a>
     </div>
   </div>
 </div>
@@ -158,23 +92,28 @@ h1 { margin:0; font-size:20px; letter-spacing:.2px; }
 import { STORY, SETTINGS } from "./story.js";
 
 const $ = (id) => document.getElementById(id);
-const SAVE_KEY = "pig_farmer_final_v1";
+const SAVE_KEY = "pig_farmer_with_venmo_v1";
 
 const penalties = [25, 50, 75, 100, 125, 150];
 const randPenalty = () => penalties[Math.floor(Math.random() * penalties.length)];
-const money = (n) => "$" + n;
+const money = (n) => "$" + Number(n || 0).toFixed(0);
 
 let state = {
   scene: STORY.start,
   path: 0,
   session: 0,
+  paid: 0,
   last: 0
 };
 
 try {
   const saved = JSON.parse(localStorage.getItem(SAVE_KEY));
-  if (saved && STORY.scenes[saved.scene]) state = saved;
+  if (saved && STORY.scenes[saved.scene]) state = { ...state, ...saved };
 } catch {}
+
+function save() {
+  localStorage.setItem(SAVE_KEY, JSON.stringify(state));
+}
 
 function shuffle(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
@@ -184,23 +123,41 @@ function shuffle(arr) {
   return arr;
 }
 
-// For EACH chapter we randomize which of the 3 buttons maps to:
+// Per chapter mapping (randomized):
 // 1) correct (no penalty)
-// 2) wrong (always random penalty)
-// 3) mixed (65% penalty, 35% bottle message)
+// 2) penalty (always random penalty)
+// 3) 65% penalty, 35% bottle message
 function rollOutcomes() {
   const thirdIsPenalty = Math.random() < SETTINGS.third_penalty_chance;
   const thirdOutcome = thirdIsPenalty ? { type: "penalty" } : { type: "bottle" };
-
-  return shuffle([
-    { type: "correct" },
-    { type: "penalty" },
-    thirdOutcome
-  ]);
+  return shuffle([{ type: "correct" }, { type: "penalty" }, thirdOutcome]);
 }
 
-function openModal(text) {
+// Build Venmo web link with prefilled amount and note
+function buildVenmoLink(amount) {
+  const username = SETTINGS.venmo_username.replace(/^@/, "");
+  const base = `https://venmo.com/${encodeURIComponent(username)}`;
+  const params = new URLSearchParams({
+    txn: "pay",
+    amount: String(Number(amount || 0).toFixed(0)),
+    note: SETTINGS.venmo_note
+  });
+  return `${base}?${params.toString()}`;
+}
+
+function openModal(text, showPay) {
   $("modalText").textContent = text;
+
+  const payBtn = $("payBtn");
+  if (showPay && state.session > 0) {
+    payBtn.style.display = "inline-flex";
+    payBtn.textContent = `Pay via Venmo (${money(state.session)})`;
+    payBtn.href = buildVenmoLink(state.session);
+  } else {
+    payBtn.style.display = "none";
+    payBtn.href = "#";
+  }
+
   $("backdrop").style.display = "flex";
   $("backdrop").setAttribute("aria-hidden", "false");
 }
@@ -210,13 +167,21 @@ function closeModal() {
   $("backdrop").setAttribute("aria-hidden", "true");
 }
 
-$("close").addEventListener("click", (e) => {
-  e.preventDefault();
-  closeModal();
-});
+$("close").addEventListener("click", (e) => { e.preventDefault(); closeModal(); });
+$("backdrop").addEventListener("click", (e) => { if (e.target === $("backdrop")) closeModal(); });
 
-$("backdrop").addEventListener("click", (e) => {
-  if (e.target === $("backdrop")) closeModal();
+// When Pay is clicked: settle SESSION amount then reset totals
+$("payBtn").addEventListener("click", () => {
+  const settled = state.session;
+  state.paid += settled;
+
+  // reset totals after clicking pay
+  state.session = 0;
+  state.path = 0;
+  state.last = 0;
+
+  save();
+  render();
 });
 
 function render() {
@@ -227,6 +192,7 @@ function render() {
 
   $("path").textContent = money(state.path);
   $("session").textContent = money(state.session);
+  $("paid").textContent = money(state.paid);
   $("last").textContent = money(state.last);
 
   const outcomes = rollOutcomes();
@@ -251,44 +217,43 @@ function render() {
           `${SETTINGS.messages.penalty}\n\n` +
           `+${money(p)} added.\n` +
           `Path: ${money(state.path)}\n` +
-          `Session: ${money(state.session)}`
+          `Session: ${money(state.session)}`,
+          true
         );
 
       } else if (o.type === "bottle") {
         state.last = 0;
-        openModal(SETTINGS.messages.bottle);
+        openModal(SETTINGS.messages.bottle, false);
 
       } else {
-        // correct choice
         state.last = 0;
-        openModal(SETTINGS.messages.correct);
+        openModal(SETTINGS.messages.correct, false);
       }
 
-      // advance story regardless
       state.scene = s.next;
-      localStorage.setItem(SAVE_KEY, JSON.stringify(state));
+      save();
       render();
     });
 
     wrap.appendChild(b);
   });
 
-  localStorage.setItem(SAVE_KEY, JSON.stringify(state));
+  save();
 }
 
 $("restart").addEventListener("click", (e) => {
   e.preventDefault();
   state.scene = STORY.start;
-  state.path = 0;   // reset path only
+  state.path = 0; // path only
   state.last = 0;
-  localStorage.setItem(SAVE_KEY, JSON.stringify(state));
+  save();
   render();
 });
 
 $("reset").addEventListener("click", (e) => {
   e.preventDefault();
   localStorage.removeItem(SAVE_KEY);
-  state = { scene: STORY.start, path: 0, session: 0, last: 0 };
+  state = { scene: STORY.start, path: 0, session: 0, paid: 0, last: 0 };
   render();
 });
 
