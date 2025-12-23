@@ -18,11 +18,11 @@ export const STORY = {
     c1: {
       title: "Chapter 1 — The Fence Line",
       text:
-`The Pig spots the Farmer leaning on the fence, calm as a sunset.
-No shouting. No chasing. Just that steady look—like the Farmer already knows what the Pig will do next.
+`The Pig spots his Alpha leaning on the fence, calm as a sunset.
+No shouting. No chasing. Just that steady look—like the Alpha already knows what the Pig will do next.
 
 The Pig tells himself: “I’m free.”
-The Farmer doesn’t argue. He just waits.`,
+The Alpha doesn’t argue. He just waits.`,
       choices: [
         "Trot away like you don’t care",
         "Walk closer and pretend it’s casual",
@@ -34,15 +34,15 @@ The Farmer doesn’t argue. He just waits.`,
     c2: {
       title: "Chapter 2 — The Shiny Pail",
       text:
-`Near the gate sits a shiny pail with a wooden ladle resting inside.
+`Near the gate sits a 3 inch black belt with a gold buckle resting inside.
 It wasn’t there yesterday. The Pig is sure of it.
 
-The Farmer taps the fence twice.
-Not a command—more like a suggestion.`,
+The Alpha taps the fence twice.
+Not a suggestion more like a command.`,
       choices: [
-        "Ignore the pail and sniff the grass",
-        "Lift the ladle and peek inside",
-        "Nudge the pail toward the Farmer with your snout"
+        "Ignore the belt and sniff the grass",
+        "Open the gate and peek inside",
+        "Nudge the belt toward the Alpha with your snout"
       ],
       next: "c3"
     },
@@ -50,14 +50,14 @@ Not a command—more like a suggestion.`,
     c3: {
       title: "Chapter 3 — The Quiet Deal",
       text:
-`The Pig remembers old rules: if you don’t look at the pail, it can’t matter.
-But the Farmer’s silence is loud.
+`The Pig remembers old rules: if you don’t look at the belt, it can’t matter.
+But the Alpha's silence is loud. The pig knows he needs to satisfy Alpha's need to drain first.
 
 The barn door creaks in the distance.
-Somewhere, a rooster laughs like he’s in on the joke.`,
+Somewhere, another pay pig laughs like he’s in on the joke.`,
       choices: [
         "Make a new rule: “Only one tiny favor”",
-        "Ask (in pig language) what the Farmer wants",
+        "Ask (in pig language) what the Alpha wants",
         "Do the favor first—then ask questions"
       ],
       next: "c4"
@@ -67,7 +67,7 @@ Somewhere, a rooster laughs like he’s in on the joke.`,
       title: "Chapter 4 — The Unlatched Gate",
       text:
 `The gate is closed… but not latched.
-That’s the thing about the Farmer: he doesn’t trap.
+That’s the thing about the Alpha: he doesn’t trap.
 He tempts.
 
 The Pig inches closer, hooves quiet in the dust.`,
@@ -86,27 +86,27 @@ The Pig inches closer, hooves quiet in the dust.`,
 The Pig’s stomach says: YES.
 The Pig’s pride says: WAIT.
 
-The Farmer rests a hand on the railing, patient.`,
+The Alpha rests a hand on the railing, patient.`,
       choices: [
         "Eat slowly and with dignity",
         "Eat fast before anyone notices",
-        "Take a bite, then look straight at the Farmer"
+        "Pay first then ask if you can eat"
       ],
       next: "c6"
     },
 
     c6: {
-      title: "Chapter 6 — The Farmer’s Smile",
+      title: "Chapter 6 — The Alpha’s Smile",
       text:
-`The Farmer smiles like he’s reading a book and the Pig just turned the page he wanted.
+`The Alpha smiles like he’s reading a book and the Pig just turned the page he wanted.
 Not mean. Not cruel.
-Just… amused.
+Just… evil.
 
 The Pig feels heat in his cheeks (which is impressive, for a pig).`,
       choices: [
         "Play it cool—pretend the smile means nothing",
         "Ham it up—do a little happy trot",
-        "Test the Farmer—pause and wait for a reaction"
+        "Test the Alpha—pause and wait for a reaction"
       ],
       next: "c7"
     },
@@ -118,52 +118,52 @@ The Pig feels heat in his cheeks (which is impressive, for a pig).`,
 Pattern turns into routine.
 Routine turns into something the Pig calls “normal.”
 
-The Farmer doesn’t change.
+The Alpha doesn’t change.
 That’s what makes it dangerous.`,
       choices: [
         "Break the routine on purpose",
         "Follow the routine because it’s easy",
-        "Improve the routine so it feels like your idea"
+        "Keep giving to prove your worth for all time"
       ],
       next: "c8"
     },
 
     c8: {
-      title: "Chapter 8 — The Bell Rope",
+      title: "Chapter 8 — The Sling",
       text:
-`A bell rope hangs near the barn.
-The Pig notices it’s freshly tied, neat as a bow.
+`A sling hangs near the barn.
+The Pig notices it’s freshly installed, neat as a bow.
 
-The Farmer looks away, like he’s not watching.
+The Alpa looks away, like he’s not watching.
 Which means he definitely is.`,
       choices: [
-        "Don’t touch the rope. Not even once.",
-        "Tug the rope lightly—just to hear it",
-        "Yank the rope like you’re calling a parade"
+        "climb in like the pig you are.",
+        "Stand near it oinking feverishly",
+        "stand and wait for Alpha to give diection"
       ],
       next: "c9"
     },
 
     c9: {
-      title: "Chapter 9 — The Sound Carries",
+      title: "Chapter 9 — Eyes Wide shut",
       text:
-`The bell sound carries across the yard.
-Other animals glance over.
+`Suddenly across the yard.
+Other cash pigs glance over.
 The Pig suddenly remembers he has an audience.
 
-The Farmer stays still, like a statue that can blink.`,
+The Alpha stays still, like a statue that can blink.`,
       choices: [
-        "Act like you meant to do that",
-        "Pretend it was an accident",
+        "Bare yourself for all to see",
+        "Act like you don't know what is going on, play it coy",
         "Bow dramatically to imaginary applause"
       ],
       next: "c10"
     },
 
     c10: {
-      title: "Chapter 10 — The Farmer’s Notebook",
+      title: "Chapter 10 — The Alpha’s Notebook",
       text:
-`The Farmer flips open a small notebook.
+`The Alpha flips open a small notebook.
 He writes something, then closes it.
 
 The Pig can’t read words, but he can read vibes.
@@ -171,7 +171,7 @@ And the vibe says: “Score kept.”`,
       choices: [
         "Stop caring about the notebook",
         "Try to peek at the page",
-        "Offer a performance worth writing down"
+        "Offer a cash drain worth writing down"
       ],
       next: "c11"
     },
@@ -182,7 +182,7 @@ And the vibe says: “Score kept.”`,
 `The barn door is half open now.
 Inside is shadow, hay, and the faint smell of something important.
 
-The Farmer taps the fence again, slow and sure.`,
+The Alpha taps the fence again, slow and sure.`,
       choices: [
         "Stay in the sunlight where it’s safe",
         "Step inside just far enough to see",
@@ -194,14 +194,14 @@ The Farmer taps the fence again, slow and sure.`,
     c12: {
       title: "Chapter 12 — The Mirror Bucket",
       text:
-`In the barn is a bucket so polished it acts like a mirror.
+`In the barn is a toilet seat devoid of a bowl so perfectly placed the pig knows qwhere he belongs..
 The Pig sees himself: mud-speckled, eyes bright, smile too eager.
 
-The Farmer’s reflection appears behind him—closer than expected.`,
+The Alpha’s reflection appears behind him—closer than expected.`,
       choices: [
         "Turn around slowly and keep your composure",
-        "Look away from the mirror and focus on the exit",
-        "Grin at your reflection like it’s a trophy"
+        "Look away from the seat and focus on the exit",
+        "Grin at the seat like it’s a trophy"
       ],
       next: "c13"
     },
@@ -209,14 +209,14 @@ The Farmer’s reflection appears behind him—closer than expected.`,
     c13: {
       title: "Chapter 13 — The Wordless Offer",
       text:
-`The Farmer doesn’t speak.
-He simply holds out the ladle—like a handshake made of wood.
+`The Alpha doesn’t speak.
+He simply points to the seat and expects you to know your role in all of this.
 
 The Pig understands: this is the part where choices feel “voluntary.”`,
       choices: [
         "Refuse politely and step back",
-        "Accept the ladle and hold it proudly",
-        "Take the ladle and do something dramatic"
+        "Accept your fate and hold it proudly",
+        "Send your Alpha cash before accepting your gift"
       ],
       next: "c14"
     },
@@ -226,7 +226,7 @@ The Pig understands: this is the part where choices feel “voluntary.”`,
       text:
 `It isn’t a leash you can see.
 It’s a leash made of habit.
-The Farmer doesn’t pull it.
+The Alpha doesn’t pull it.
 The Pig does.
 
 And somehow that’s worse.`,
@@ -243,12 +243,12 @@ And somehow that’s worse.`,
       text:
 `The same yard looks smaller today.
 Not because it shrank—
-because the Pig’s world has been orbiting the Farmer for a while now.
+because the Pig’s world has been orbiting the Alpha for a while now.
 
-The Farmer scratches the fence rail, patient as ever.`,
+The Alpha scratches the fence rail, patient as ever.`,
       choices: [
         "Explore the far corner of the yard",
-        "Stay near the Farmer because it’s familiar",
+        "Stay near the Alpha because it’s familiar",
         "Make a bold move to reclaim your ‘freedom’"
       ],
       next: "c16"
@@ -257,15 +257,15 @@ The Farmer scratches the fence rail, patient as ever.`,
     c16: {
       title: "Chapter 16 — “Show Me”",
       text:
-`The Farmer finally speaks, soft and simple:
+`The Alpha finally speaks, soft and simple:
 “Show me.”
 
 No explanation. No instructions.
 Just two words that make the Pig’s heart thump.`,
       choices: [
-        "Ask: “Show you what?”",
-        "Show confidence first—questions later",
-        "Act unimpressed (even if you’re not)"
+        "Send the large amount and show Alpha the reciept",
+        "Present your pig ass for belt lashes",
+        "Tell Alpha to Take More"
       ],
       next: "c17"
     },
@@ -273,9 +273,9 @@ Just two words that make the Pig’s heart thump.`,
     c17: {
       title: "Chapter 17 — The Crowd Returns",
       text:
-`The rooster is back.
-So are the goats.
-Even the cat appears, bored and judgmental.
+`The cash pigs are back.
+So are the faggots.
+Even the bear appears, bored and judgmental.
 
 The Pig senses it: a moment.
 A stage.
@@ -291,12 +291,12 @@ A choice that will be remembered.`,
     c18: {
       title: "Chapter 18 — The Nod",
       text:
-`The Farmer nods once.
+`The Alpha nods once.
 That single nod lands like a medal.
 
 The Pig feels an old truth: approval can be its own kind of currency.`,
       choices: [
-        "Take the nod and walk away satisfied",
+        "Take the nod and send to Alpha plus a tip satisfied",
         "Chase a bigger nod",
         "Pretend you don’t care… and chase it anyway"
       ],
@@ -307,33 +307,33 @@ The Pig feels an old truth: approval can be its own kind of currency.`,
       title: "Chapter 19 — The Ledger Page",
       text:
 `The notebook returns.
-The Farmer flips to a page filled with marks—lines, tallies, little symbols.
+The Alpha flips to a page filled with marks—lines, tallies, little symbols.
 
-The Pig realizes the Farmer has been tracking everything.
-Not just actions. Patterns.`,
+The Pig realizes the Alpha has been tracking everything.
+Not just actions. Arunning score of money owed.`,
       choices: [
-        "Decide to stop feeding the pattern",
-        "Decide to embrace the pattern fully",
-        "Decide to rewrite the pattern with one bold move"
+        "Grin with glee and say Just one more time Alpha",
+        "Tell Alpha you're hard as fuck thinking about his running ledger",
+        "Sniff your popper and get ready to send"
       ],
       next: "c20"
     },
 
     c20: {
-      title: "Chapter 20 — The Choice",
+      title: "Chapter 20 — The So-Called Choice",
       text:
-`The Farmer opens the gate again.
-Not latched. Not locked.
+`The Alpha stands there, arms crossed.
+No words, just an evil smile.
 
 The Pig understands the secret:
-The Farmer never took anything.
+The Alpha never took anything.
 The Pig always offered.
 
-And the story continues… because it’s a story about choosing.`,
+And the story continues… because it’s a story about you being a filthy cash pig who loves paying.`,
       choices: [
-        "Walk away and end the loop",
-        "Step closer and accept the routine",
-        "Look the Farmer in the eye and choose anyway"
+        "Cum as you realize what a pig you are as you send",
+        "Send Alpha his dues and then cum later realzing how hard you've been drained",
+        "Look the Alpha in the eye and Send with a 25% tip"
       ],
       next: "c1"
     }
